@@ -1,0 +1,251 @@
+shish@Ashishs-MacBook-Air ~ % git config --global user.email                  
+64488392+Ashish725@users.noreply.github.com
+ashish@Ashishs-MacBook-Air ~ % git config --global user.name"Ashish725"
+ashish@Ashishs-MacBook-Air ~ % git config --global user.name           
+Ashish725
+ashish@Ashishs-MacBook-Air ~ % cd /Users/ashish/Desktop
+ashish@Ashishs-MacBook-Air Desktop % ls
+COA
+DAA
+DSD_lab
+EVS
+NM
+OOP
+Screenshot 2021-02-08 at 11.49.23 AM.png
+Screenshot 2021-02-15 at 10.33.57 AM.png
+Screenshot 2021-02-15 at 12.51.38 PM.png
+Screenshot 2021-02-18 at 11.57.31 AM.png
+Screenshot 2021-02-24 at 2.27.20 PM.png
+Screenshot 2021-02-24 at 3.39.04 PM.png
+Screenshot 2021-03-02 at 10.34.22 AM.png
+Screenshot 2021-03-02 at 9.09.47 AM.png
+Screenshot 2021-03-05 at 9.34.27 PM.png
+Screenshot 2021-03-06 at 11.26.51 AM.png
+Screenshot 2021-03-12 at 12.12.04 PM.png
+lab5_q1.png
+lab5_q2.png
+lab5_q3.png
+lab5_q4.png
+os_labn
+output_priority_p.png
+sample
+ss
+ashish@Ashishs-MacBook-Air Desktop % cd sample
+ashish@Ashishs-MacBook-Air sample % pwd
+/Users/ashish/Desktop/sample
+ashish@Ashishs-MacBook-Air sample % git init
+Initialized empty Git repository in /Users/ashish/Desktop/sample/.git/
+ashish@Ashishs-MacBook-Air sample % git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+ashish@Ashishs-MacBook-Air sample % git remote add origin https://github.com/Ashish725/hello.git
+ashish@Ashishs-MacBook-Air sample % git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+ashish@Ashishs-MacBook-Air sample % ls
+ashish@Ashishs-MacBook-Air sample % pwd    
+/Users/ashish/Desktop/sample
+ashish@Ashishs-MacBook-Air sample % touch abc.txt
+ashish@Ashishs-MacBook-Air sample % ls
+abc.txt
+ashish@Ashishs-MacBook-Air sample % git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	abc.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+ashish@Ashishs-MacBook-Air sample % git add abc.txt
+ashish@Ashishs-MacBook-Air sample % git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   abc.txt
+
+ashish@Ashishs-MacBook-Air sample % touch xyz.txt
+ashish@Ashishs-MacBook-Air sample % ls
+abc.txt	xyz.txt
+ashish@Ashishs-MacBook-Air sample % cat abc.txt
+Sakshat teaches me about open source
+ashish@Ashishs-MacBook-Air sample % git status   
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   abc.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	xyz.txt
+
+ashish@Ashishs-MacBook-Air sample % git add .      
+ashish@Ashishs-MacBook-Air sample % git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   abc.txt
+	new file:   xyz.txt
+
+ashish@Ashishs-MacBook-Air sample % git commit -m "added two file abc.txt  xyz.txt" 
+[master (root-commit) f66ad2e] added two file abc.txt  xyz.txt
+ 2 files changed, 1 insertion(+)
+ create mode 100644 abc.txt
+ create mode 100644 xyz.txt
+ashish@Ashishs-MacBook-Air sample % git status
+On branch master
+nothing to commit, working tree clean
+ashish@Ashishs-MacBook-Air sample % git log
+commit f66ad2e920f5960aba2dc390fd70631942846d6c (HEAD -> master)
+Author: Ashish725 <64488392+Ashish725@users.noreply.github.com>
+Date:   Fri Mar 12 19:15:56 2021 +0530
+
+    added two file abc.txt  xyz.txt
+ashish@Ashishs-MacBook-Air sample % git show f66ad2e920f5960aba2dc390fd70631942846d6c
+commit f66ad2e920f5960aba2dc390fd70631942846d6c (HEAD -> master)
+Author: Ashish725 <64488392+Ashish725@users.noreply.github.com>
+Date:   Fri Mar 12 19:15:56 2021 +0530
+
+    added two file abc.txt  xyz.txt
+
+diff --git a/abc.txt b/abc.txt
+new file mode 100644
+index 0000000..f6d40c7
+--- /dev/null
++++ b/abc.txt
+@@ -0,0 +1 @@
++Sakshat teaches me about open source
+diff --git a/xyz.txt b/xyz.txt
+new file mode 100644
+index 0000000..e69de29
+ashish@Ashishs-MacBook-Air sample % git log --pretty=oneline
+f66ad2e920f5960aba2dc390fd70631942846d6c (HEAD -> master) added two file abc.txt  xyz.txt
+ashish@Ashishs-MacBook-Air sample % git branch -M main
+ashish@Ashishs-MacBook-Air sample % git log --pretty=oneline
+f66ad2e920f5960aba2dc390fd70631942846d6c (HEAD -> main) added two file abc.txt  xyz.txt
+ashish@Ashishs-MacBook-Air sample % git push -u origin main
+Username for 'https://github.com': Ashish725
+Password for 'https://Ashish725@github.com': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 312 bytes | 312.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/Ashish725/hello.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+ashish@Ashishs-MacBook-Air sample % git log
+commit f66ad2e920f5960aba2dc390fd70631942846d6c (HEAD -> main, origin/main)
+Author: Ashish725 <64488392+Ashish725@users.noreply.github.com>
+Date:   Fri Mar 12 19:15:56 2021 +0530
+
+    added two file abc.txt  xyz.txt
+ashish@Ashishs-MacBook-Air sample % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   abc.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+ashish@Ashishs-MacBook-Air sample % git add .
+ashish@Ashishs-MacBook-Air sample % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   abc.txt
+
+ashish@Ashishs-MacBook-Air sample % git commit -m "update abc.txt"
+[main 3998ced] update abc.txt
+ 1 file changed, 2 insertions(+)
+ashish@Ashishs-MacBook-Air sample % git status                    
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+ashish@Ashishs-MacBook-Air sample % git log
+commit 3998ced15e3b5b695e722d0ed32cfa5cf1145c14 (HEAD -> main)
+Author: Ashish725 <64488392+Ashish725@users.noreply.github.com>
+Date:   Fri Mar 12 19:29:34 2021 +0530
+
+    update abc.txt
+
+commit f66ad2e920f5960aba2dc390fd70631942846d6c (origin/main)
+Author: Ashish725 <64488392+Ashish725@users.noreply.github.com>
+Date:   Fri Mar 12 19:15:56 2021 +0530
+
+    added two file abc.txt  xyz.txt
+ashish@Ashishs-MacBook-Air sample % git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 355 bytes | 355.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Ashish725/hello.git
+   f66ad2e..3998ced  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+ashish@Ashishs-MacBook-Air sample % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+ashish@Ashishs-MacBook-Air sample % git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Ashish725/hello
+ * branch            main       -> FETCH_HEAD
+   3998ced..900c7fb  main       -> origin/main
+Updating 3998ced..900c7fb
+Fast-forward
+ xyz.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ashish@Ashishs-MacBook-Air sample % git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+ashish@Ashishs-MacBook-Air sample % git log
+commit 900c7fb1cf441fde0deddb471a2a46f1aceb54b1 (HEAD -> main, origin/main)
+Author: Ashish725 <64488392+Ashish725@users.noreply.github.com>
+Date:   Fri Mar 12 19:34:05 2021 +0530
+
+    adding text to xyz.txt
+
+commit 3998ced15e3b5b695e722d0ed32cfa5cf1145c14
+Author: Ashish725 <64488392+Ashish725@users.noreply.github.com>
+Date:   Fri Mar 12 19:29:34 2021 +0530
+
+    update abc.txt
+
+commit f66ad2e920f5960aba2dc390fd70631942846d6c
+Author: Ashish725 <64488392+Ashish725@users.noreply.github.com>
+Date:   Fri Mar 12 19:15:56 2021 +0530
+
+    added two file abc.txt  xyz.txt
+ashish@Ashishs-MacBook-Air sample % 
